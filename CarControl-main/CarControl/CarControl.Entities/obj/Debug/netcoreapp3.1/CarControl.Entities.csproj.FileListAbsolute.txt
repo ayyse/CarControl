@@ -1,0 +1,8 @@
+C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Entities\bin\Debug\netcoreapp3.1\CarControl.Entities.deps.json
+C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Entities\bin\Debug\netcoreapp3.1\CarControl.Entities.dll
+C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Entities\bin\Debug\netcoreapp3.1\CarControl.Entities.pdb
+C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Entities\obj\Debug\netcoreapp3.1\CarControl.Entities.AssemblyInfoInputs.cache
+C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Entities\obj\Debug\netcoreapp3.1\CarControl.Entities.AssemblyInfo.cs
+C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Entities\obj\Debug\netcoreapp3.1\CarControl.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Entities\obj\Debug\netcoreapp3.1\CarControl.Entities.dll
+C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Entities\obj\Debug\netcoreapp3.1\CarControl.Entities.pdb

@@ -1,0 +1,65 @@
+﻿@model CarControl.Entities.DataAccess.Car
+
+@{ ViewBag.Title = "Details";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+<div>
+    <div align="right">
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.CarId }) |
+            @Html.ActionLink("Back to List", "Index")
+            <div>
+                @*<a class="btn btn-warning" data-toggle="modal" data-target="#myModal" data-id="@Model.CarId">Delete</a>*@
+                <a type="button" style="background-color: indianred; color: white; padding: 5px; border-radius: 5px" asp-controller="Car" asp-action="Delete" data-id="@Model.CarId">Delete</a>
+            </div>
+        </p>
+    </div>
+
+    <div style="margin-top:30px; margin-left:50px">
+        <table>
+            <tr>
+                <td style="border-bottom: 1px solid rgba(9, 198, 171, 0.8); font-size: 22px; width:900px">
+                    @Html.DisplayFor(model => model.Plaka)
+                </td>
+            </tr>
+        </table>
+        <div>
+            <ul>
+                <li>
+                    <div style="margin-top: 10px">
+                        <p>Login Time : @Html.DisplayFor(model => model.LoginTime)</p>
+                    </div>
+                </li>
+                <li>
+                    <div style="margin-top: 10px">
+                        <p>Exit Time : @Html.DisplayFor(model => model.ExitTime)</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">-->
+<!-- Modal content-->
+<!--<div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Warning!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete?</p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-warning" href="@Url.Action("Delete", new { id = Model.CarId})">Delete</a>
+            </div>
+        </div>
+
+    </div>
+</div>-->

@@ -1,0 +1,39 @@
+﻿@model CarControl.Entities.DataAccess.Car
+@{ ViewData["Title"] = "Edit";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<form asp-controller="Car" asp-action="Edit" method="post">
+    <div class="col-md-6 col-sm-6">
+        <div>
+            <input hidden-for="CarId" asp-for="CarId" class="form-control" style="visibility: hidden" />
+        </div>
+        <div>
+            <input hidden-for="CustomerId" asp-for="CustomerId" class="form-control" style="visibility: hidden" />
+        </div>
+        <div>
+            <label asp-for="Plaka">Plaka: </label>
+            <input asp-for="Plaka" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="Customer.FullName">Customer Name: </label>
+            <input asp-for="Customer.FullName" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="LoginTime">Customer Name: </label>
+            <input asp-for="LoginTime" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="ExitTime">Customer Name: </label>
+            <input asp-for="ExitTime" class="form-control" />
+        </div>
+        <div style="margin: 10px">
+            <button type="submit" class="form-control" id="cf-submit" name="submit" value="Create" style="background-color: #74d14c">Edit Car</button>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
