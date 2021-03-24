@@ -1,7 +1,9 @@
 ﻿@model CarControl.Entities.DataAccess.Car
 
-@{ ViewBag.Title = "Details";
-                Layout = "~/Views/Shared/_Layout.cshtml"; }
+@{ 
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
 
 
 <div>
@@ -26,6 +28,11 @@
         </table>
         <div>
             <ul>
+                @*<li>
+                    <div style="margin-top: 10px">
+                        <p>Customer Name : @Html.DisplayFor(model => model.Customer.FullName)</p>
+                    </div>
+                </li>*@
                 <li>
                     <div style="margin-top: 10px">
                         <p>Login Time : @Html.DisplayFor(model => model.LoginTime)</p>

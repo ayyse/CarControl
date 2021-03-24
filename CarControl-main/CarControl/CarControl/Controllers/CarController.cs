@@ -17,20 +17,25 @@ namespace CarControl.Controllers
             _context = context;
         }
 
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             var data = _repository.GetList();
             return View(data);
         }
 
-        public async Task<ActionResult> Details(int id)
+        public ActionResult Details(int id)
         {
-            var data = _repository.GetList();
+            var data = _repository.Get(id);
             return View(data);
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
 
-        public async Task<ActionResult> Create(Car entity)
+        [HttpPost]
+        public ActionResult Create(Car entity)
         {
             var recordNum = _context.Cars.ToList().Count();
             if (recordNum < 6)
@@ -41,7 +46,13 @@ namespace CarControl.Controllers
             return View("Create");
         }
 
+        public ActionResult Edit(int id)
+        {
+            var data = _repository.Get(id);
+            return View(data);
+        }
 
+        [HttpPost]
         public async Task<ActionResult> Edit(int id, Car entity)
         {
             var data = _repository.Update(id, entity);

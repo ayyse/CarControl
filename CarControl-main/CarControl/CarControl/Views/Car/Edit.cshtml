@@ -1,29 +1,24 @@
 ﻿@model CarControl.Entities.DataAccess.Car
-@{ ViewData["Title"] = "Edit";
-                Layout = "~/Views/Shared/_Layout.cshtml"; }
+@{ 
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
 
 <form asp-controller="Car" asp-action="Edit" method="post">
     <div class="col-md-6 col-sm-6">
         <div>
             <input hidden-for="Id" asp-for="Id" class="form-control" style="visibility: hidden" />
         </div>
-        @*<div>
-            <input hidden-for="Id" asp-for="Id" class="form-control" style="visibility: hidden" />
-        </div>*@
         <div>
             <label asp-for="Plaka">Plaka: </label>
             <input asp-for="Plaka" class="form-control" />
         </div>
         <div>
-            <label asp-for="Customer.FullName">Customer Name: </label>
-            <input asp-for="Customer.FullName" class="form-control" />
-        </div>
-        <div>
-            <label asp-for="LoginTime">Customer Name: </label>
+            <label asp-for="LoginTime">Login Time: </label>
             <input asp-for="LoginTime" class="form-control" />
         </div>
         <div>
-            <label asp-for="ExitTime">Customer Name: </label>
+            <label asp-for="ExitTime">Exit Time: </label>
             <input asp-for="ExitTime" class="form-control" />
         </div>
         <div style="margin: 10px">

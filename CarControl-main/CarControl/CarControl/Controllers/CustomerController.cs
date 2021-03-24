@@ -27,17 +27,22 @@ namespace CarControl.Controllers
             return View(data);
         }
 
-        public async Task<ActionResult> Details(int id)
+        public ActionResult Details(int id)
         {
             var data = _repository.Get(id);
             return View(data);
         }
 
+        public async Task<ActionResult> Create()
+        {
+            return View();
+        }
+
         [HttpPost]
-        public async Task<ActionResult> Create(Customer entity)
+        public async Task<ActionResult> Create(int id, Customer entity)
         {
             var data = _repository.Save(entity);
-            return View("/Car/Create");
+            return RedirectToAction("Create", "Car");
         }
 
         [HttpPost]

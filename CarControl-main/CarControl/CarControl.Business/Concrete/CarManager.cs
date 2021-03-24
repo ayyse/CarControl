@@ -24,7 +24,9 @@ namespace CarControl.Business.Concrete
 
         public Car Get(int id)
         {
-            return _context.Set<Car>().SingleOrDefault();
+            Car data = _context.Cars.Find(id);
+            return data;
+            //return _context.Set<Car>().SingleOrDefault();
         }
 
         public List<Car> GetList()
