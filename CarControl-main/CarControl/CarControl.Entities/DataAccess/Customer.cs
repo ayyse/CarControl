@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 namespace CarControl.Entities.DataAccess
 
 {
-    public class Customer
+    public class Customer : BaseEntity
     {
-        [Key]
-        public int CustomerId { get; set; }
 
         [NotMapped]
         public List<Car> Cars { get; set; }

@@ -1513,7 +1513,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.1.10"
+          "Microsoft.EntityFrameworkCore": "3.1.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.10"
         },
         "compile": {
           "bin/placeholder/CarControl.Entities.dll": {}
@@ -5764,11 +5765,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl\\CarControl.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl\\CarControl.csproj",
       "projectName": "CarControl",
-      "projectPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl\\CarControl.csproj",
+      "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl\\CarControl.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl\\obj\\",
+      "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5785,11 +5786,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj": {
-              "projectPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj"
+            "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj": {
+              "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj"
             },
-            "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj": {
-              "projectPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj"
+            "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj": {
+              "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj"
             }
           }
         }

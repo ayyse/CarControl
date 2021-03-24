@@ -10,3 +10,15 @@ C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Business\bin\Debug\n
 C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.csproj.CopyComplete
 C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.dll
 C:\Users\Acer\Desktop\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.pdb
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\bin\Debug\netcoreapp3.1\CarControl.Business.deps.json
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\bin\Debug\netcoreapp3.1\CarControl.Business.dll
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\bin\Debug\netcoreapp3.1\CarControl.Business.pdb
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\bin\Debug\netcoreapp3.1\CarControl.Entities.dll
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\bin\Debug\netcoreapp3.1\CarControl.Entities.pdb
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.csprojAssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.AssemblyInfoInputs.cache
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.AssemblyInfo.cs
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.csproj.CopyComplete
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.dll
+C:\Users\Acer\Documents\GitHub\CarControl\CarControl-main\CarControl\CarControl.Business\obj\Debug\netcoreapp3.1\CarControl.Business.pdb

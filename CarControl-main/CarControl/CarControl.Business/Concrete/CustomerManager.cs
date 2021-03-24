@@ -1,5 +1,6 @@
 ﻿using CarControl.Business.Abstract;
 using CarControl.Entities.DataAccess;
+using CarControl.Entities.DataContext;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,53 +11,43 @@ namespace CarControl.Business.Concrete
 {
     public class CustomerManager : IBaseRepository<Customer>
     {
+        private readonly CarContext _context;
+        public CustomerManager(CarContext context)
+        {
+            _context = context;
+        }
         public Customer Delete(int id, Customer entity)
         {
-            using (CarContext carContext = new CarContext())
-            {
-                var deletedEntity = carContext.Entry(entity);
-                deletedEntity.State = EntityState.Deleted;
-                carContext.SaveChanges();
-                return entity;
-            }
+            var deletedEntity = _context.Entry(entity);
+            deletedEntity.State = EntityState.Deleted;
+            _context.SaveChanges();
+            return entity;
         }
 
         public Customer Get(int id)
         {
-            using (CarContext carContext = new CarContext())
-            {
-                return carContext.Set<Customer>().SingleOrDefault();
-            }
+            return _context.Set<Customer>().SingleOrDefault();
         }
 
         public List<Customer> GetList()
         {
-            using (CarContext carContext = new CarContext())
-            {
-                return carContext.Set<Customer>().ToList();
-            }
+            return _context.Set<Customer>().ToList();
         }
 
         public Customer Save(Customer entity)
         {
-            using (CarContext carContext = new CarContext())
-            {
-                var addedEntity = carContext.Entry(entity);
-                addedEntity.State = EntityState.Added;
-                carContext.SaveChanges();
-                return entity;
-            }
+            var addedEntity = _context.Entry(entity);
+            addedEntity.State = EntityState.Added;
+            _context.SaveChanges();
+            return entity;
         }
 
         public Customer Update(int id, Customer entity)
         {
-            using (CarContext carContext = new CarContext())
-            {
-                var updatedEntity = carContext.Entry(entity);
-                updatedEntity.State = EntityState.Modified;
-                carContext.SaveChanges();
-                return entity;
-            }
+            var updatedEntity = _context.Entry(entity);
+            updatedEntity.State = EntityState.Modified;
+            _context.SaveChanges();
+            return entity;
         }
     }
 }

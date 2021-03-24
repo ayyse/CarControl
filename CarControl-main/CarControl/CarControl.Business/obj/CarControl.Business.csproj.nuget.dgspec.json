@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj": {}
+    "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj": {
+    "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj",
         "projectName": "CarControl.Business",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj",
+        "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Business\\CarControl.Business.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Business\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj": {
-                "projectPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj"
+              "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj": {
+    "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj",
         "projectName": "CarControl.Entities",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj",
+        "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Entities\\CarControl.Entities.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\CarControl-main\\CarControl\\CarControl.Entities\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\CarControl\\CarControl-main\\CarControl\\CarControl.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -99,6 +99,10 @@
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.10, )"
             }

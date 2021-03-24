@@ -4,19 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CarControl.Entities.DataAccess
 {
-    public class Car
+    public class Car : BaseEntity
     {
-        [Key]
-        public int CarId { get; set; }
-
-
+        
         [NotMapped]
-        public int CustomerId { get; set; }
         [ForeignKey("CustomerId")]
         public Customer Customer { get; set; }
-
-        //[NotMapped]
-        //public List<Time> Times { get; set; }
 
 
         public string Plaka { get; set; }

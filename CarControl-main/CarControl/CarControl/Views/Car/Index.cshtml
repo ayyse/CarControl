@@ -1,38 +1,38 @@
 ﻿@model System.Collections.Generic.IEnumerable<CarControl.Entities.DataAccess.Car>
-@{ ViewData["Title"] = "Index";
-                Layout = "~/Views/Shared/_Layout.cshtml"; }
+@{ 
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 <body>
 
     <div class="container">
         <h2></h2>
         <p>@DateTime.Now</p>
-        @*<a class="nav-link text-dark" asp-area="" asp-controller="Car" asp-action="Record">Record Number</a>*@
         <table class="table">
             <thead>
                 <tr>
                     <th>Plaka</th>
-                    <th>Full Name</th>
                     <th>Login Time</th>
                     <th>Exit Time</th>
                 </tr>
             </thead>
             @foreach (var item in Model)
             {
-<tbody>
-    <tr>
-        <td>@item.Plaka</td>
-        <td>@item.Customer.FullName</td>
-        <td>@item.LoginTime</td>
-        <td>@item.ExitTime</td>
-        <td>
-            <a type="button" style="background-color: #74d14c; color: white; padding: 5px; border-radius: 5px; margin-right: 5px" asp-action="Details" asp-route-id="@item.CarId">Details</a>
-            <a type="button" style="background-color: #74d14c; color: white; padding: 5px; border-radius: 5px; margin-right: 5px" asp-action="Edit" asp-route-id="@item.CarId">Edit</a>
-            <a type="button" style="background-color: indianred; color: white; padding: 5px; border-radius: 5px" asp-controller="Car" asp-action="Delete" asp-route-id="@item.CarId">Delete</a>
+                <tbody>
+                    <tr>
+                        <td>@item.Plaka</td>
+                        <td>@item.LoginTime</td>
+                        <td>@item.ExitTime</td>
+                        <td>
+                            <a type="button" style="background-color: #74d14c; color: white; padding: 5px; border-radius: 5px; margin-right: 5px" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            <a type="button" style="background-color: #74d14c; color: white; padding: 5px; border-radius: 5px; margin-right: 5px" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a type="button" style="background-color: indianred; color: white; padding: 5px; border-radius: 5px" asp-controller="Car" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
 
-        </td>
-    </tr>
-</tbody>            }
+                        </td>
+                    </tr>
+                </tbody>
+            }
         </table>
     </div>
 </body>

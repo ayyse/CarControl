@@ -5,11 +5,11 @@
 <form asp-controller="Car" asp-action="Edit" method="post">
     <div class="col-md-6 col-sm-6">
         <div>
-            <input hidden-for="CarId" asp-for="CarId" class="form-control" style="visibility: hidden" />
+            <input hidden-for="Id" asp-for="Id" class="form-control" style="visibility: hidden" />
         </div>
-        <div>
-            <input hidden-for="CustomerId" asp-for="CustomerId" class="form-control" style="visibility: hidden" />
-        </div>
+        @*<div>
+            <input hidden-for="Id" asp-for="Id" class="form-control" style="visibility: hidden" />
+        </div>*@
         <div>
             <label asp-for="Plaka">Plaka: </label>
             <input asp-for="Plaka" class="form-control" />

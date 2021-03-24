@@ -7,11 +7,11 @@
 <div>
     <div align="right">
         <p>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.CarId }) |
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
             @Html.ActionLink("Back to List", "Index")
             <div>
                 @*<a class="btn btn-warning" data-toggle="modal" data-target="#myModal" data-id="@Model.CarId">Delete</a>*@
-                <a type="button" style="background-color: indianred; color: white; padding: 5px; border-radius: 5px" asp-controller="Car" asp-action="Delete" data-id="@Model.CarId">Delete</a>
+                <a type="button" style="background-color: indianred; color: white; padding: 5px; border-radius: 5px" asp-controller="Car" asp-action="Delete" data-id="@Model.Id">Delete</a>
             </div>
         </p>
     </div>
@@ -45,21 +45,4 @@
 
 
 
-<!--<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">-->
-<!-- Modal content-->
-<!--<div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Warning!</h4>
-            </div>
-            <div class="modal-body">
-                <p>Are you sure want to delete?</p>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-warning" href="@Url.Action("Delete", new { id = Model.CarId})">Delete</a>
-            </div>
-        </div>
 
-    </div>
-</div>-->
