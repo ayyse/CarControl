@@ -10,12 +10,10 @@ namespace CarControl.Controllers
 {
     public class CarController : Controller
     {
-        private readonly CarContext _context;
         private readonly IBaseRepository<Car> _repository;
-        public CarController(IBaseRepository<Car> repository, CarContext context)
+        public CarController(IBaseRepository<Car> repository)
         {
             _repository = repository;
-            _context = context;
         }
 
         public ActionResult Index()
@@ -38,7 +36,7 @@ namespace CarControl.Controllers
         [HttpPost]
         public ActionResult Create(Car entity)
         {
-            var recordNum = _context.Cars.ToList().Count();
+            var recordNum = _repository.GetAll().Count(); 
             if (recordNum < 6)
             {
                 _repository.Add(entity);

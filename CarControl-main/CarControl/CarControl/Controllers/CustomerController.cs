@@ -13,12 +13,10 @@ namespace CarControl.Controllers
 {
     public class CustomerController : Controller
     {
-        private readonly CarContext _context;
         private readonly IBaseRepository<Customer> _repository;
-        public CustomerController(IBaseRepository<Customer> repository, CarContext context)
+        public CustomerController(IBaseRepository<Customer> repository)
         {
             _repository = repository;
-            _context = context;
         }
 
         public async Task<ActionResult> Index()
