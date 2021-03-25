@@ -1,4 +1,5 @@
 ﻿using CarControl.Business.Abstract;
+using CarControl.Entities.Abstract;
 using CarControl.Entities.DataAccess;
 using CarControl.Entities.DataContext;
 using Microsoft.EntityFrameworkCore;
@@ -9,45 +10,41 @@ namespace CarControl.Business.Concrete
 {
     public class CarManager : IBaseRepository<Car>
     {
-        private readonly CarContext _context;
-        public CarManager(CarContext context)
+        private readonly IUnitofWork _unitofWork;
+        public CarManager(IUnitofWork unitofWork)
         {
-            _context = context;
+            _unitofWork = unitofWork;
         }
-        public Car Delete(int id, Car entity)
+
+        public Car Remove(Car entity)
         {
-            var deletedEntity = _context.Entry(entity);
-            deletedEntity.State = EntityState.Deleted;
-            _context.SaveChanges();
-            return entity;
+            var data = _unitofWork.carRepository.Remove(entity);
+            _unitofWork.Save();
+            return data;
         }
 
         public Car Get(int id)
         {
-            Car data = _context.Cars.Find(id);
+            return _unitofWork.carRepository.Get(id);
+        }
+
+        public List<Car> GetAll()
+        {
+            return _unitofWork.carRepository.GetAll().ToList();
+        }
+
+        public Car Add(Car entity)
+        {
+            var data = _unitofWork.carRepository.Add(entity);
+            _unitofWork.Save();
             return data;
-            //return _context.Set<Car>().SingleOrDefault();
         }
 
-        public List<Car> GetList()
+        public Car Update(Car entity)
         {
-            return _context.Set<Car>().ToList();
-        }
-
-        public Car Save(Car entity)
-        {
-            var addedEntity = _context.Entry(entity);
-            addedEntity.State = EntityState.Added;
-            _context.SaveChanges();
-            return entity;
-        }
-
-        public Car Update(int id, Car entity)
-        {
-            var updatedEntity = _context.Entry(entity);
-            updatedEntity.State = EntityState.Modified;
-            _context.SaveChanges();
-            return entity;
+            var data = _unitofWork.carRepository.Update(entity);
+            _unitofWork.Save();
+            return data;
         }
     }
 }

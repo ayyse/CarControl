@@ -1,4 +1,5 @@
 ﻿using CarControl.Business.Abstract;
+using CarControl.Business.Concrete;
 using CarControl.Entities.DataAccess;
 using CarControl.Entities.DataContext;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +20,7 @@ namespace CarControl.Controllers
 
         public ActionResult Index()
         {
-            var data = _repository.GetList();
+            var data = _repository.GetAll();
             return View(data);
         }
 
@@ -40,7 +41,7 @@ namespace CarControl.Controllers
             var recordNum = _context.Cars.ToList().Count();
             if (recordNum < 6)
             {
-                var data = _repository.Save(entity);
+                _repository.Add(entity);
                 return View("Index");
             }
             return View("Create");
@@ -53,15 +54,15 @@ namespace CarControl.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Edit(int id, Car entity)
+        public async Task<ActionResult> Edit(Car entity)
         {
-            var data = _repository.Update(id, entity);
-            return View(data);
+            _repository.Update(entity);
+            return RedirectToAction("Edit");
         }
 
-        public async Task<ActionResult> Delete(int id, Car entity)
+        public async Task<ActionResult> Delete(Car entity)
         {
-            var data = _repository.Delete(id, entity);
+            _repository.Remove(entity);
             return RedirectToAction("Index");
         }
     }

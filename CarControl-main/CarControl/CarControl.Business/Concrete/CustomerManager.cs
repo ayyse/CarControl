@@ -1,4 +1,5 @@
 ﻿using CarControl.Business.Abstract;
+using CarControl.Entities.Abstract;
 using CarControl.Entities.DataAccess;
 using CarControl.Entities.DataContext;
 using Microsoft.EntityFrameworkCore;
@@ -11,43 +12,40 @@ namespace CarControl.Business.Concrete
 {
     public class CustomerManager : IBaseRepository<Customer>
     {
-        private readonly CarContext _context;
-        public CustomerManager(CarContext context)
+        private readonly IUnitofWork _unitofWork;
+        public CustomerManager(IUnitofWork unitofWork)
         {
-            _context = context;
+            _unitofWork = unitofWork;
         }
-        public Customer Delete(int id, Customer entity)
+        public Customer Remove(Customer entity)
         {
-            var deletedEntity = _context.Entry(entity);
-            deletedEntity.State = EntityState.Deleted;
-            _context.SaveChanges();
-            return entity;
+            var data = _unitofWork.customerRepository.Remove(entity);
+            _unitofWork.Save();
+            return data;
         }
 
         public Customer Get(int id)
         {
-            return _context.Set<Customer>().SingleOrDefault();
+            return _unitofWork.customerRepository.Get(id);
         }
 
-        public List<Customer> GetList()
+        public List<Customer> GetAll()
         {
-            return _context.Set<Customer>().ToList();
+            return _unitofWork.customerRepository.GetAll().ToList();
         }
 
-        public Customer Save(Customer entity)
+        public Customer Add(Customer entity)
         {
-            var addedEntity = _context.Entry(entity);
-            addedEntity.State = EntityState.Added;
-            _context.SaveChanges();
-            return entity;
+            var data = _unitofWork.customerRepository.Add(entity);
+            _unitofWork.Save();
+            return data;
         }
 
-        public Customer Update(int id, Customer entity)
+        public Customer Update(Customer entity)
         {
-            var updatedEntity = _context.Entry(entity);
-            updatedEntity.State = EntityState.Modified;
-            _context.SaveChanges();
-            return entity;
+            var data = _unitofWork.customerRepository.Update(entity);
+            _unitofWork.Save();
+            return data;
         }
     }
 }

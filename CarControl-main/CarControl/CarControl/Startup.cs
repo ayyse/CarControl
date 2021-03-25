@@ -1,5 +1,7 @@
 using CarControl.Business.Abstract;
 using CarControl.Business.Concrete;
+using CarControl.Entities.Abstract;
+using CarControl.Entities.Concrete;
 using CarControl.Entities.DataAccess;
 using CarControl.Entities.DataContext;
 using CarControl.Models;
@@ -27,6 +29,9 @@ namespace CarControl
                 (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
 
+            services.AddScoped<IUnitofWork, UnitofWork>();
+            //services.AddScoped<ICarRepository, CarRepository>();
+            //services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IBaseRepository<Car>, CarManager>();
             services.AddScoped<IBaseRepository<Customer>, CustomerManager>();
         }

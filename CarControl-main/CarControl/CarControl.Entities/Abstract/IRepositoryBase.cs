@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CarControl.Business.Abstract
+namespace CarControl.Entities.Abstract
 {
-    public interface IBaseRepository<T>
+    public interface IRepositoryBase<T> where T : class, new()
     {
         List<T> GetAll();
         T Get(int id);

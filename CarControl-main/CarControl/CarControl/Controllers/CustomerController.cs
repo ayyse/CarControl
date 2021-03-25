@@ -23,7 +23,7 @@ namespace CarControl.Controllers
 
         public async Task<ActionResult> Index()
         {
-            var data = _repository.GetList();
+            var data = _repository.GetAll();
             return View(data);
         }
 
@@ -41,22 +41,22 @@ namespace CarControl.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(int id, Customer entity)
         {
-            var data = _repository.Save(entity);
+            _repository.Add(entity);
             return RedirectToAction("Create", "Car");
         }
 
         [HttpPost]
-        public async Task<ActionResult> Edit(int id, Customer entity)
+        public async Task<ActionResult> Edit(Customer entity)
         {
-            var data = _repository.Update(id, entity);
-            return View(data);
+            _repository.Update(entity);
+            return View();
         }
 
         [HttpPost]
-        public async Task<ActionResult> Delete(int id, Customer entity)
+        public async Task<ActionResult> Delete(Customer entity)
         {
-            var data = _repository.Delete(id, entity);
-            return View(data);
+            _repository.Remove(entity);
+            return View();
         }
     }
 }
